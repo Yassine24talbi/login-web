@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>login page</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body id="body">
+
+  <div class="content">
+    
+    <div class="indexs">
+    <a href="#" id="alogin" class="index" onclick="toLogin()" style="color: white;">Login</a>
+    <a href="#" id="asinge" class="index" onclick="toSingeUp()">Sign Up</a>
+  </div>
+
+
+
+    <!-- logine -->
+
+
+
+     
+  <div class="login" id="login">
+
+    <h2 id="h22"></h2>
+    <div id="welcoom">
+      <i class='bx bx-check' id="in"></i>
+      <i class='bx bxs-color'id="loding"></i>
+      <i class='bx bx-error' id="out"></i>
+    <h3 id="h3">Welcoom Back </h3>
+  </div>
+    
+      <form class="login-form">
+
+    <input type="text" class="user-name" id="user-name" onkeyup="labelViseblty('lone','user-name')">
+    <label class="user-name" id="lone">User name</label>
+
+    <input type="password" class="user-password" id="user-password" onkeyup="labelViseblty('ltwo','user-password')">
+    <label class="user-password" id="ltwo">Password</label>
+
+    <input type="checkbox" class="check" onchange="togglePasswordVisibility()">
+    <p style="position: absolute;">View Password</p>
+
+    <button class="btn-login" id="btn-login" onclick="userback()">Login</button>
+
+    <a href="#" class="forget">forget the password</a>
+
+  </form>
+
+  </div>
+
+
+
+
+  <!-- new user -->
+
+
+
+  <div class="new-user" id="new-user">
+
+    <h2 id="h2"></h2>
+
+    <form class="Singe">
+    
+    <input type="text" class="full-name" id="full-name" onkeyup="labelViseblty('full-name-label','full-name')">
+    <label class="full-name" id="full-name-label">Full Name</label>
+
+    <input type="text" class="new-user-name" id="new-user-name" onkeyup="test();labelViseblty('new-user-name-label','new-user-name')">
+    <label class="new-user-name" id="new-user-name-label">User name</label>
+
+    <input type="password" class="new-user-password" id="new-user-password"  onkeyup="labelViseblty('new-user-password-label','new-user-password')">
+    <label class="new-user-password" id="new-user-password-label">Password</label>
+    <input type="checkbox" class="check" onchange="togglePasswordVisibility2()">
+    <p style="position: absolute;">View Password</p>
+    
+    <button class="btn-singe" id="btn-singe" onclick="newuserdatainvalid()">Sign Up</button>
+    
+  </form>
+
+  </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
